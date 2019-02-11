@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Symfony + Drupal = 💙</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown data-background="gifs/friends.gif">
+					# Symfony + Drupal = 💙
+
+					- Eirik Morland, Ny Media AS
+					- [@orkj](https://twitter.com/orkj)
+				</section>
+				<section data-markdown="">
+					# Agenda
+
+					- A brief history
+					- How is Drupal using Symfony?
+					- What Symfony paradigms are Drupal using?
+					- What are the benefits of this friendship?
+					- What does the future of Drupal and Symfony look like?
+				</section>
+				<section data-markdown data-background="gifs/island.gif">
+					## Brief history
+
+					- Version 8 was the version where Drupal "got off the island"
+					- Symfony components has been in Drupal since version 8.0.0 (November 2015)
+					- First shipped with Symfony 2.7, currently with 3.4
+					- Symfony is not the only important aspect of getting "off the island"
+				</section>
+				<section data-background="gifs/work.gif" data-markdown="">
+				</section>
+				<section>
+					<img class="stretch" src="img/symfony-composer.png" />
+				</section>
+				<section data-markdown="" data-background="gifs/think.gif">
+					## Yes, but do we even use it?
+				</section>
+				<section>
+					<img class="stretch" src="img/index.png" />
+				</section>
+				<section>
+					<img class="stretch" src="img/kernel.png" />
+				</section>
+				<section>
+					<img class="stretch" src="img/globals.png" />
+				</section>
+				<section>
+					<img class="stretch" src="img/handle.png" />
+				</section>
+				<section>
+					<img class="stretch" src="img/terminate.png" />
+				</section>
+				<section>
+					<img class="stretch" src="img/index.png" />
+				</section>
+				<section data-background="gifs/yes.gif" data-markdown="">
+				</section>
+				<section data-background="gifs/twins.gif" data-markdown="">
+					# Other similarities
+				</section>
+				<section>
+					<img class="stretch" src="img/services-symfony.png" />
+				</section>
+				<section>
+					<img class="stretch" src="img/services-drupal.png" />
+					<img class="stretch" src="img/core-param.png" />
+				</section>
+				<section>
+					<img class="stretch" src="img/drupal-route.png" />
+				</section>
+				<section>
+					<img class="stretch" src="img/route-annotation.png">
+					<img class="stretch" src="img/routeyml.png" />
+				</section>
+				<section>
+					<img class="stretch" src="img/drupal-annotation-plugin.png">
+					<img class="stretch" src="img/drupal-yml-plugin.png" />
+				</section>
+				<section>
+					<div data-markdown="">
+						## ...and many more
+
+						- Event listeners and dispatchers
+						- Console components
+						- Service container and dependency injection
+						- Serializers (i.e json or xml)
+						- Useful things are built and maintained by us all, together
+						- Security issues.
+					</div>
+					<aside class="notes">
+						In Drupal, for example, rendering a controller is an event. So we have one listener that will render it as html if suitable. Other events could be all of those from KernelEvent, we have an access denied event. An exception event. You can make your own events. You name it.
+						Drupal console is a thing. And Drush, something everyone that uses Drupal uses, requires console as well.
+						Other useful things, like yaml parsing, polyfills and file system helpers, are in the symfony namespace, and we are now collaborating on this, since we all depend on it.
+						Security issues for php web framework things, are now one thing.
+					</aside>
+				</section>
+				<section >
+					<div data-markdown="">
+						# Benefits of Symfony + Drupal
+					</div>
+				</section>
+				<section data-markdown="">
+					## 1. Code re-use
+				</section>
+				<section data-markdown="">
+					## 2. Documentation already exists
+				</section>
+				<section data-markdown="">
+					## 3. Less Drupalisms
+				</section>
+				<section data-markdown="">
+					# The future of Drupal + Symfony
+				</section>
+				<section data-markdown="">
+					> Our biggest dependency in Drupal 8 is Symfony 3, and according to Symfony's roadmap, Symfony 3 has an end-of-life date in November 2021. This means that after November 2021, security bugs in Symfony 3 will not get fixed. To keep your Drupal sites secure, Drupal must adopt Symfony 4 or Symfony 5 before Symfony 3 goes end-of-life (...) This means we have to end-of-life Drupal 8 no later than November 2021.
+				</section>
+			
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				history: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
