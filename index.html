@@ -48,6 +48,7 @@
 					- Symfony is not the only important aspect of getting "off the island"
 				</section>
 				<section data-background="gifs/work.gif" data-markdown="">
+					## How is Drupal using Symfony?
 				</section>
 				<section>
 					<img class="stretch" src="img/symfony-composer.png" />
@@ -104,8 +105,6 @@
 						- Console components
 						- Service container and dependency injection
 						- Serializers (i.e json or xml)
-						- Useful things are built and maintained by us all, together
-						- Security issues.
 					</div>
 					<aside class="notes">
 						In Drupal, for example, rendering a controller is an event. So we have one listener that will render it as html if suitable. Other events could be all of those from KernelEvent, we have an access denied event. An exception event. You can make your own events. You name it.
@@ -114,19 +113,47 @@
 						Security issues for php web framework things, are now one thing.
 					</aside>
 				</section>
-				<section >
-					<div data-markdown="">
+				<section data-background="gifs/benefits.gif">
+					<div data-markdown="" >
 						# Benefits of Symfony + Drupal
 					</div>
 				</section>
-				<section data-markdown="">
+				<section>
+						<div data-markdown="">
 					## 1. Code re-use
+						</div>
+						<img class="stretch" src="img/json.png">
+						<img class="stretch" src="img/controller.png">
 				</section>
-				<section data-markdown="">
+				<section data-background="gifs/library.gif">
+						<div data-markdown="">
 					## 2. Documentation already exists
+					</div>
+					<aside class="notes">
+						I have 2 examples of this:
+						- Creating a Serializers
+						- Parameters for service definitions.
+					</aside>
 				</section>
-				<section data-markdown="">
+				<section data-background="gifs/mutant.gif">
+						<div data-markdown="">
 					## 3. Less Drupalisms
+						</div>
+						<aside class="notes">
+							Drupalisms is something
+						</aside>
+				</section>
+				<section data-background="gifs/security.gif">
+					<div data-markdown="">
+						## 4. Coordinated security
+
+						- For example CVE-2018-14773
+						- Other example: CVE-2019-6339
+					
+					</div>
+					<aside class="notes">
+						At least in one instance, 
+					</aside>
 				</section>
 				<section data-markdown="">
 					# The future of Drupal + Symfony
@@ -134,7 +161,18 @@
 				<section data-markdown="">
 					> Our biggest dependency in Drupal 8 is Symfony 3, and according to Symfony's roadmap, Symfony 3 has an end-of-life date in November 2021. This means that after November 2021, security bugs in Symfony 3 will not get fixed. To keep your Drupal sites secure, Drupal must adopt Symfony 4 or Symfony 5 before Symfony 3 goes end-of-life (...) This means we have to end-of-life Drupal 8 no later than November 2021.
 				</section>
-			
+				<section>
+					<img class="stretch" src="img/drupal9.jpg" />
+				</section>
+				<section data-background="gifs/future.gif">
+				</section>
+				<section data-markdown="">
+					## Thank you!
+
+					- [@orkj](https://twitter.com/orkj)
+					- [https://github.com/eiriksm/](https://github.com/eiriksm)
+					- [https://eiriksm.github.io/symfony-drupal/](https://eiriksm.github.io/symfony-drupal/)
+				</section>
 			</div>
 		</div>
 
